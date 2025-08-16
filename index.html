@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dina Salon</title>
+  <style>
+    body {
+      margin:0;
+      font-family:'Tahoma',sans-serif;
+      color:#333;
+      /* خلفية ثابتة */
+      background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* طبقة شفافة لتحسين قراءة النصوص */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255,255,255,0.75);
+      z-index: -1;
+    }
+
+    header {
+      background: linear-gradient(to right,#d4af37,#f7e7b4);
+      color:#fff;
+      padding:20px;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    /* تعديل عنوان المشروع */
+    .project-title {
+      font-size: 48px;          
+      font-style: italic;       
+      font-weight: bold;        
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      animation: fadeZoom 1.2s ease-in-out;
+    }
+
+    /* تأثير اللمعان */
+    .shimmer {
+      background: linear-gradient(
+        90deg,
+        #d4af37 0%,
+        #fff8dc 50%,
+        #d4af37 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 2.5s linear infinite, fadeZoom 1.2s ease-in-out;
+    }
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    /* تأثير التوهج */
+    .glow {
+      text-shadow:
+        0 0 5px #d4af37,
+        0 0 10px #ffd700,
+        0 0 20px #ffd700,
+        0 0 40px #ffecb3;
+    }
+
+    /* الوصف */
+    .tagline {
+      font-size: 20px;          
+      font-style: italic;       
+      color: #333;              
+      margin-top: 5px;
+      animation: fadeZoom 1.2s ease-in-out;
+    }
+
+    /* حركة الدخول */
+    @keyframes fadeZoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    nav {
+      background:#fff;
+      padding:10px;
+      text-align:center;
+    }
+    nav a {
+      margin:0 15px;
+      color:#333;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .hero {
+      background:url('https://via.placeholder.com/1200x500?text=Dina+Salon') center/cover no-repeat;
+      height:350px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction: column;
+      text-align: center;
+      color:#fff;
+      font-size:2em;
+      font-weight:bold;
+    }
+    .btn {
+      background:#d4af37;
+      padding:10px 20px;
+      color:#fff;
+      font-size:18px;
+      border-radius:5px;
+      text-decoration:none;
+      margin-top:20px;
+    }
+
+    section {
+      padding:40px 20px;
+      text-align:center;
+    }
+    .services {
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .service {
+      border:1px solid #ddd;
+      padding:20px;
+      width:250px;
+      border-radius:10px;
+      background:#fafafa;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 1000px;
+      margin: 20px auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .top-gallery {
+      padding: 30px 20px 0 20px;
+    }
+
+    footer {
+      background:#333;
+      color:#fff;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.jpg" alt="Dina Salon Logo" class="logo">
+      <div>
+        <!-- اسم المشروع مع التأثيرات -->
+        <h1 class="project-title threeD">Dina Salon</h1>
+        <p class="tagline">Your Beauty... A Touch of Art</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About Us</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="booking.html">Book Now</a>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <div>Welcome to Dina Salon</div>
+      <br>
+      <a class="btn" href="booking.html">Book Your Appointment</a>
+    </div>
+  </div>
+
+  <section class="top-gallery">
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Gallery Top Image 1">
+      <img src="images/photo2.jpg" alt="Gallery Top Image 2">
+      <img src="images/photo3.jpg" alt="Gallery Top Image 3">
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service"><h3>Haircuts</h3><p>Modern and stylish haircuts with perfect precision.</p></div>
+      <div class="service"><h3>Hair Coloring</h3><p>Trendy colors with high quality finishes.</p></div>
+      <div class="service"><h3>Event Hairstyles</h3><p>Elegant looks for your special occasion.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Gallery</h2>
+    <div class="gallery">
+      <img src="images/photo4.jpg" alt="Gallery Bottom Image 1">
+      <img src="images/photo5.jpg" alt="Gallery Bottom Image 2">
+      <img src="images/photo6.jpg" alt="Gallery Bottom Image 3">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Dina Salon - All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
