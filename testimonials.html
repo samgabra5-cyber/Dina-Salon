@@ -1,107 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dina Salon - Testimonials</title>
-  <style>
-    html {
-      height: 100%;
-      background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-      background-size: cover;
-    }
-    body {
-      margin: 0;
-      min-height: 100%;
-      font-family: 'Tahoma', sans-serif;
-      color: #333;
-      position: relative;
-      background: none;
-      font-size: 18px;
-      z-index: 0;
-      position: relative;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.75);
-      z-index: -1;
-      pointer-events: none;
-    }
-    header {
-      background: linear-gradient(to right, #d4af37, #f7e7b4);
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #fff;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 40px 20px;
-      background: #fafafa;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 1;
-    }
-    .testimonial {
-      background: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-      font-size: 1.1em;
-      color: #333;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    }
-    footer {
-      background: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dina Salon - Testimonials</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tahoma', sans-serif;
+    background: url('images/myphoto.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100%;
+    color: #333;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+    pointer-events: none;
+  }
+  header {
+    background: linear-gradient(to right, #d4af37, #f7e7b4);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  nav {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  nav a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  nav a.active {
+    color: #d4af37;
+  }
+  section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #d4af37;
+    margin-bottom: 30px;
+  }
+  .testimonial {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .testimonial p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  .testimonial .client {
+    font-weight: bold;
+    color: #d4af37;
+    margin-top: 10px;
+  }
+  footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+</style>
 </head>
 <body>
+
 <header>
   <h1>Dina Salon</h1>
-  <p>What Our Clients Say</p>
+  <p>Testimonials</p>
 </header>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="services.html">Services</a>
   <a href="about.html">About Us</a>
-  <a href="testimonials.html">Testimonials</a>
+  <a href="testimonials.html" class="active">Testimonials</a>
   <a href="booking.html">Book Now</a>
+  <a href="contact.html">Contact</a>
 </nav>
+
 <section>
+  <h2>What Our Clients Say</h2>
+  
   <div class="testimonial">
-    <p>"Absolutely love my new haircut! The stylists are fantastic."</p>
-    <strong>- Sarah K.</strong>
+    <p>"I absolutely love my new hairstyle! The team at Dina Salon is professional and attentive. Highly recommended!"</p>
+    <div class="client">- Sarah M.</div>
   </div>
+
   <div class="testimonial">
-    <p>"Perfect color and style for my wedding, thank you Dina Salon!"</p>
-    <strong>- Emily R.</strong>
+    <p>"The braiding service was exceptional. They listened to my preferences and delivered exactly what I wanted. Fantastic experience!"</p>
+    <div class="client">- Jasmine K.</div>
   </div>
+
+  <div class="testimonial">
+    <p>"Great atmosphere, clean environment, and amazing hair services. I will definitely come back!"</p>
+    <div class="client">- Angela T.</div>
+  </div>
+
+  <div class="testimonial">
+    <p>"From haircut to coloring, everything was perfect. The staff are very friendly and skilled."</p>
+    <div class="client">- Linda W.</div>
+  </div>
+  
 </section>
+
 <footer>
   <p>© 2025 Dina Salon - All Rights Reserved</p>
 </footer>
+
 </body>
 </html>
