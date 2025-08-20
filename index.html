@@ -5,23 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dina Salon - Home</title>
 <style>
-  html, body {
+  /* خلفية ثابتة */
+  body {
     margin: 0;
-    padding: 0;
     font-family: 'Tahoma', sans-serif;
-    background: url('images/myphoto.jpg') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100%;
+    color: #333;
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
   }
   body::before {
     content: "";
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.75);
+    background-image: url('images/myphoto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: -1;
-    pointer-events: none;
   }
+
   header {
     background: linear-gradient(to right, #d4af37, #f7e7b4);
     color: white;
@@ -73,7 +77,6 @@
     color: #fff;
     font-size: 2em;
     font-weight: bold;
-    /* الخلفية هنا محذوفة لتجنب التكرار */
   }
   .btn {
     background: #d4af37;
@@ -87,6 +90,9 @@
   section {
     padding: 40px 20px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* شفافية لتوضيح النص فوق الخلفية */
+    margin: 20px;
+    border-radius: 10px;
   }
   .services, .gallery {
     display: flex;
