@@ -1,149 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dina Salon - Book Now</title>
-  <style>
-    html {
-      height: 100%;
-      background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-      background-size: cover;
-    }
-    body {
-      margin: 0;
-      min-height: 100%;
-      font-family: 'Tahoma', sans-serif;
-      color: #333;
-      position: relative;
-      background: none;
-      font-size: 18px;
-      z-index: 0;
-      position: relative;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.75);
-      z-index: -1;
-      pointer-events: none;
-    }
-    header {
-      background: linear-gradient(to right, #d4af37, #f7e7b4);
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #fff;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    section {
-      max-width: 500px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fafafa;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 1;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    label {
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    input[type="text"],
-    input[type="tel"],
-    input[type="date"],
-    input[type="time"],
-    select {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-      box-sizing: border-box;
-      width: 100%;
-    }
-    button {
-      background: #d4af37;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 1.1em;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background: #b8902e;
-    }
-    footer {
-      background: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dina Salon - Book Now</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tahoma', sans-serif;
+    background: url('images/myphoto.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100%;
+    color: #333;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+    pointer-events: none;
+  }
+  header {
+    background: linear-gradient(to right, #d4af37, #f7e7b4);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  nav {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  nav a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  nav a.active {
+    color: #d4af37;
+  }
+  section {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #d4af37;
+    margin-bottom: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="time"],
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  button {
+    background: #d4af37;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background: #b8902e;
+  }
+  footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Dina Salon</h1>
-    <p>Book Your Appointment</p>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About Us</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="booking.html">Book Now</a>
-  </nav>
-  <section>
-    <form>
-      <label for="name">Full Name</label>
-      <input type="text" id="name" placeholder="Full Name" required>
-      
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" placeholder="Phone Number" required>
-      
-      <label for="date">Select Date</label>
-      <input type="date" id="date" required>
-      
-      <label for="time">Select Time</label>
-      <input type="time" id="time" required>
-      
-      <label for="service">Select Service</label>
-      <select id="service" required>
-        <option value="">Select Service</option>
-        <option value="haircut">Haircut</option>
-        <option value="haircolor">Hair Coloring</option>
-        <option value="eventhairstyle">Event Hairstyle</option>
-        <option value="hairtreatment">Hair Treatment</option>
-      </select>
-      
-      <button type="submit">Submit Booking</button>
-    </form>
-  </section>
-  <footer>
-    <p>© 2025 Dina Salon - All Rights Reserved</p>
-  </footer>
+
+<header>
+  <h1>Dina Salon</h1>
+  <p>Book Your Appointment</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About Us</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="booking.html" class="active">Book Now</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+  <h2>Appointment Form</h2>
+  <form>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Full Name" required>
+    
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    
+    <label for="date">Select Date</label>
+    <input type="date" id="date" required>
+    
+    <label for="time">Select Time</label>
+    <input type="time" id="time" required>
+    
+    <label for="service">Select Service</label>
+    <select id="service" required>
+      <option value="">Select Service</option>
+      <option value="haircut">Haircut - $30</option>
+      <option value="haircolor">Hair Coloring - $80</option>
+      <option value="treatment">Treatment & Style (Wash, Blow Dry, Iron) - $55</option>
+      <option value="4stitch">4 Stitch Braids - $70</option>
+      <option value="6stitch">6 Stitch Braids - $90</option>
+      <option value="fullbraids">Full Head Braids - $120</option>
+      <option value="halfbraids">Half Head Braids - $80</option>
+      <option value="retwistfull">Retwist Full Head - $120</option>
+      <option value="retwisthalf">Retwist Half Head - $100</option>
+      <option value="smallretwist">Small Size Retwist - $140</option>
+      <option value="knotlesslarge">Knotless Large Mid Back - $100</option>
+      <option value="knotlessmedium">Knotless Medium Mid Back - $180</option>
+      <option value="knotlesssmall">Knotless Small/Medium Mid Back - $300</option>
+      <option value="bohemianlong">Bohemian Knotless Long Mid Back - $180</option>
+      <option value="bohemianmedium">Bohemian Knotless Medium Mid Back - $250</option>
+    </select>
+    
+    <button type="submit">Submit Booking</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Dina Salon - All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
