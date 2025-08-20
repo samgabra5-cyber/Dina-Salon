@@ -1,108 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dina Salon - About Us</title>
-  <style>
-    html {
-      height: 100%;
-      background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-      background-size: cover;
-    }
-    body {
-      margin: 0;
-      min-height: 100%;
-      font-family: 'Tahoma', sans-serif;
-      color: #333;
-      position: relative;
-      background: none;
-      font-size: 18px;
-      z-index: 0;
-      position: relative;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.75);
-      z-index: -1;
-      pointer-events: none;
-    }
-    header {
-      background: linear-gradient(to right, #d4af37, #f7e7b4);
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    nav {
-      background: #fff;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fafafa;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      line-height: 1.6;
-      font-size: 1.1em;
-      position: relative;
-      z-index: 1;
-      color: #333;
-    }
-    h2 {
-      text-align: center;
-      color: #d4af37;
-      margin-bottom: 20px;
-      font-size: 2em;
-    }
-    footer {
-      background: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dina Salon - About Us</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tahoma', sans-serif;
+    background: url('images/myphoto.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100%;
+    color: #333;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+    pointer-events: none;
+  }
+  header {
+    background: linear-gradient(to right, #d4af37, #f7e7b4);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  nav {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  nav a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  nav a.active {
+    color: #d4af37;
+  }
+  section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #d4af37;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+  footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+</style>
 </head>
 <body>
+
 <header>
   <h1>Dina Salon</h1>
-  <p>About Our Salon</p>
+  <p>About Us</p>
 </header>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="services.html">Services</a>
-  <a href="about.html">About Us</a>
+  <a href="about.html" class="active">About Us</a>
   <a href="testimonials.html">Testimonials</a>
   <a href="booking.html">Book Now</a>
+  <a href="contact.html">Contact</a>
 </nav>
+
 <section>
   <h2>Welcome to Dina Salon</h2>
-  <p>
-    At Dina Salon, we are committed to providing exceptional hair care services tailored to your individual style and needs. Our team of experienced stylists are passionate about helping you look and feel your best.
-  </p>
-  <p>
-    Our salon uses only the highest quality products and the latest techniques to ensure your hair remains healthy and vibrant. Whether you want a classic haircut, modern color, or a special event hairstyle, Dina Salon is your go-to destination.
-  </p>
-  <p>
-    We believe every client deserves personalized attention, and we strive to create a welcoming and relaxing environment where you can unwind while we take care of your hair.
-  </p>
+  <p>At Dina Salon, we are passionate about bringing out your natural beauty and making you feel confident and radiant. Our team of professional stylists is dedicated to providing high-quality services tailored to your individual needs.</p>
+  <p>Whether it's a stylish haircut, vibrant hair coloring, elegant event hairstyles, or intricate braiding techniques, we ensure a relaxing and enjoyable experience. We use only premium products to ensure your hair stays healthy, shiny, and gorgeous.</p>
+  <p>Our mission is to combine creativity, expertise, and personalized attention to deliver exceptional hair care services in a welcoming and luxurious environment. Join us and discover a new level of beauty and self-care.</p>
 </section>
+
 <footer>
   <p>© 2025 Dina Salon - All Rights Reserved</p>
 </footer>
+
 </body>
 </html>
